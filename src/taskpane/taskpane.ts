@@ -4,6 +4,12 @@
  */
 
 /* global document, Office */
+import { Subject } from "../subjects/subject";
+import { AddressSubject } from "../subjects/addressSubject";
+
+//test varibles for subjects
+var testSub = new Subject("Hello", "World");
+var testAddressSub = new AddressSubject("building","0000","","building name","address","suburb","vic");
 
 Office.onReady((info) => {
   if (info.host === Office.HostType.Outlook) {
@@ -19,5 +25,5 @@ export async function run() {
    */
 
   const item = Office.context.mailbox.item;
-  document.getElementById("item-subject").innerHTML = "<b>Subject:</b> <br/>" + item.subject;
+  document.getElementById("item-subject").innerHTML = testAddressSub.print();
 }

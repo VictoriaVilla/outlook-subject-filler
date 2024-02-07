@@ -1,5 +1,5 @@
 import { Subject } from "./subject";
-class AddressSubject extends Subject {
+export class AddressSubject extends Subject {
   constructor(
     name: string,
     ocNumber: string,

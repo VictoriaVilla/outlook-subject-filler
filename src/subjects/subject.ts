@@ -4,6 +4,6 @@ export class Subject {
         this.subLine = subLine;
     }
     print(): string {
-        return `${this.subLine} - Subject line: ${this.subLine}.`;
+        return `${this.name} - Subject line: ${this.subLine}.`;
     }
 }
