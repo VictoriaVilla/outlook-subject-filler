@@ -23,6 +23,8 @@ function action(event: Office.AddinCommands.Event) {
 
   // Show a notification message.
   Office.context.mailbox.item.notificationMessages.replaceAsync("ActionPerformanceNotification", message);
+  // Opens dialog window
+  Office.context.ui.displayDialogAsync('https://www.contoso.com/myDialog.html', {height: 30, width: 20});
 
   // Be sure to indicate when the add-in command function is complete.
   event.completed();
