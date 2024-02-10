@@ -5,12 +5,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HELLO</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+    <title>Add Subject</title>
 </head>
-    <body>
-        <main>
-            HELLO
-        </main>
-    </body>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
+        <h1 class="ms-font-su">Add Subject</h1>
+    </header>
+    <main id="app-body" class="ms-welcome__main">
+        <form>
+            <fluent-text-field appearance="outline" id="name">Subject Name</fluent-text-field>
+
+            <fluent-radio-group orientation="horizontal">
+                <fluent-radio>Basic</fluent-radio>
+                <fluent-radio>Address</fluent-radio>
+            </fluent-radio-group>
+
+            <div id="subTypeBase">
+                <fluent-text-field appearance="outline" id="subLine">Subject</fluent-text-field>
+            </div>
+            <div id="subTypeAddress">
+                <fluent-text-field appearance="outline" id="buildingName">Building Name</fluent-text-field>
+                <fluent-text-field appearance="outline" id="address">Address</fluent-text-field>
+                <fluent-text-field appearance="outline" id="suburb">Suburb</fluent-text-field>
+                <fluent-select title="Select a state" id="state">
+                    <fluent-option value="vic">VIC</fluent-option>
+                    <fluent-option value="qld">QLD</fluent-option>
+                </fluent-select>
+                <fluent-text-field appearance="outline" id="ocNumber">OC Number</fluent-text-field>
+                <fluent-text-field appearance="outline" id="ctsNumber">CTS Number</fluent-text-field>
+            </div>
+            <fluent-button appearance="accent">Submit</fluent-button>
+
+
+
+        </form>
+
+    </main>
+</body>
 
 </html>

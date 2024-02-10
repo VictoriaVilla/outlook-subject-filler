@@ -24,9 +24,10 @@
     "stop": "office-addin-debugging stop manifest.xml",
     "validate": "office-addin-manifest validate manifest.xml",
     "watch": "webpack --mode development --watch",
-    "test":"jest"
+    "test": "jest"
   },
   "dependencies": {
+    "@fluentui/web-components": "^2.5.16",
     "core-js": "^3.9.1",
     "regenerator-runtime": "^0.13.7"
   },
